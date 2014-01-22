@@ -4,12 +4,21 @@
 
 1) install mysql
 2) create a database "broadleaf_demosite"
+3) create a database user "root" with password "password"
 3) Start tomcat using the tc_up.sh script
+
+Note: if you want to use a different db application user, change the "database.user" and "database.password" parameters in the tc_up.sh script accordingly
 
 ### Build & Deploy
 
 1) Run rebuild.sh script to build the application
 2) Start tomcat using the tc_up.sh script
+
+### Browsing the site
+
+Frontend: http://localhost:8444/
+Admin: http://localhost:8444/admin
+
 
 ## The New Broadleaf Commerce Demo Site
 

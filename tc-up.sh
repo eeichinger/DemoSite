@@ -1,5 +1,5 @@
 
-spring_instrument_path=/Users/admin/.m2/repository/org/springframework/spring-instrument/3.2.6.RELEASE/spring-instrument-3.2.6.RELEASE.jar
+spring_instrument_path=./lib/spring-instrument-3.2.6.RELEASE.jar
 
 #jrebel_path=/Users/admin/Dropbox/oc_work/postoffice/broadleaf-demo-workspace/Demosite-github/lib/jrebel/jrebel.jar
 
