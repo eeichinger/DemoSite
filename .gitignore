@@ -16,3 +16,10 @@ site/solrhome
 combined/data/
 combined/solrhome
 *.error
+tomcat/logs
+tomcat/temp
+tomcat/work
+tomcat/conf/Catalina
+tomcat/webapps/ROOT/
+tomcat/webapps/admin/
+licensing.info

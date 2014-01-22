@@ -15,7 +15,7 @@
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
         <!-- httpsPort and httpPort are used by embeded jetty server.-->
         <!-- Make sure the following httpsPort matches what's in the runtime-properties file,  -->
-        <httpsPort>8444</httpsPort> 
+        <httpsPort>8444</httpsPort>
         <httpPort>8081</httpPort>
     </properties>
     <build>
@@ -38,7 +38,7 @@
                     <contextPath>/admin</contextPath>
                     <stopPort>9967</stopPort>
                     <stopKey>foo</stopKey>
-        
+
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                             <port>${httpPort}</port>
@@ -56,7 +56,7 @@
                     </webAppConfig>
                 </configuration>
             </plugin>
-    
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>keytool-maven-plugin</artifactId>
@@ -86,7 +86,7 @@
                     <keyalg>RSA</keyalg>
                 </configuration>
             </plugin>
-    
+
             <plugin>
                 <groupId>org.zeroturnaround</groupId>
                 <artifactId>jrebel-maven-plugin</artifactId>
@@ -132,7 +132,7 @@
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-contentmanagement-module</artifactId>
         </dependency>
-    
+
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-framework-web</artifactId>
@@ -148,6 +148,11 @@
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>

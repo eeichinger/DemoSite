@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- httpsPort and httpPort are used by embeded jetty server.-->
         <!-- Make sure the following httpsPort matches what's in the runtime-properties file,  -->
-        <httpsPort>8443</httpsPort> 
+        <httpsPort>8443</httpsPort>
         <httpPort>8080</httpPort>
     </properties>
     <build>
@@ -43,7 +43,7 @@
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                             <port>${httpPort}</port>
-                            
+
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                         <connector implementation="org.eclipse.jetty.server.ssl.SslSelectChannelConnector">
@@ -58,7 +58,7 @@
                     </webAppConfig>
                 </configuration>
             </plugin>
-        
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>keytool-maven-plugin</artifactId>
@@ -88,7 +88,7 @@
                     <keyalg>RSA</keyalg>
                 </configuration>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.zeroturnaround</groupId>
                 <artifactId>jrebel-maven-plugin</artifactId>
@@ -122,6 +122,11 @@
             <artifactId>hsqldb</artifactId>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>
@@ -132,6 +137,16 @@
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument</artifactId>
+            <version>3.2.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-instrument-tomcat</artifactId>
+            <version>3.2.6.RELEASE</version>
         </dependency>
     </dependencies>
 </project>
